@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+  scroll-behavior: smooth;
+}
+
+
+
+
+.skeleton {
+  animation: skeleton-loading 0.7s linear infinite alternate;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(200, 20%, 80%);
+  }
+ 100% {
+    background-color: hsl(200, 20%, 95%);
+  }
+}
+
+
+
+
