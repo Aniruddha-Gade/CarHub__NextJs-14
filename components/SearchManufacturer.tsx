@@ -8,7 +8,8 @@ import Image from 'next/image';
 
 
 import { manufacturers } from '@/constants'
-import { SearchManuFacturerProps } from '@/types';
+// import { SearchManuFacturerProps } from '@/types';
+import {SearchManuFacturerProps} from '../types/types'
 
 
 
