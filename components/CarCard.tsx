@@ -9,9 +9,9 @@ import { calculateCarRent, generateCarImageUrl } from '@/utils';
 
 
 
-const CarCard = ({ car }: CarCardProps) => {
+const CarCard = ({ car, key }: { car: CarCardProps; key: number }) => {
 
-  const { city_mpg, class: carClass, make, model, transimission, drive, year } = car;
+  const { city_mpg, class: carClass, make, model, transmission, drive, year } = car;
 
   const carRent = calculateCarRent(city_mpg, year)
 
@@ -21,10 +21,10 @@ const CarCard = ({ car }: CarCardProps) => {
 
   return (
     <div className='flex flex-col p-6 justify-center items-start text-black-100 bg-primary-blue-100 hover:bg-white hover:shadow-md rounded-3xl group'>
-        <h2 className='text-[22px] leading-[26px] font-bold capitalize'>
-          {make} {model}
-        </h2>
-      
+      <h2 className='text-[22px] leading-[26px] font-bold capitalize'>
+        {make} {model}
+      </h2>
+
 
       <p className='flex mt-6 text-[32px] font-extrabold '>
         <span className='self-start text-[14px] font-semibold'>
@@ -56,7 +56,7 @@ const CarCard = ({ car }: CarCardProps) => {
               height={20}
             />
             <p className='text-[14px] text-black font-semibold'>
-              {transimission === 'a' ? 'Automatic' : 'Manual'}
+              {transmission === 'a' ? 'Automatic' : 'Manual'}
             </p>
           </div>
 
