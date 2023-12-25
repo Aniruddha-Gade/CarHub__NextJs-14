@@ -9,7 +9,7 @@ import { calculateCarRent, generateCarImageUrl } from '@/utils';
 
 
 
-const CarCard = ({ car, key }: { car: CarCardProps; key: number }) => {
+const CarCard = ({ car }: { car: CarCardProps }) => {
 
   const { city_mpg, class: carClass, make, model, transmission, drive, year } = car;
 

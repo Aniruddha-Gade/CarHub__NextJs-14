@@ -6,8 +6,8 @@ export async function fetchCars(filters: FilterProps) {
   console.log('filters values  ', filters)
 
   const headers = {
-    'X-RapidAPI-Key': 'e1c39e554bmsh594a2d947e79db1p1e18e9jsnd0271d576463',
-    'X-RapidAPI-Host': 'cars-by-api-ninjas.p.rapidapi.com'
+    'X-RapidAPI-Key': process.env.NEXT_PUBLIC_X_RAPIDAPI_KEY,
+    'X-RapidAPI-Host': process.env.NEXT_PUBLIC_X_RAPIDAPI_HOST
   }
 
   const response = await fetch(
@@ -18,7 +18,6 @@ export async function fetchCars(filters: FilterProps) {
   );
   const result = await response.json()
   // console.log('result = ', result);
-
   return result;
 }
 
