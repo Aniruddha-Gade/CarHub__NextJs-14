@@ -6,7 +6,9 @@ import React, { useState, useEffect } from 'react';
 import { Hero, SearchBar, CustomFilter, CarCard, ShowMore } from '@/components'
 import { fetchCars } from '@/utils'
 import { fuels, yearsOfProduction } from '@/constants';
-import { HomeProps } from '@/types'
+// import { HomeProps } from '@/types'
+import { HomeProps } from './../types/types';
+
 
 
 // skeleton body
