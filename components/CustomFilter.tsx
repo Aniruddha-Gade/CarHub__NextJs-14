@@ -4,12 +4,13 @@ import { useState, Fragment } from 'react'
 import Image from 'next/image'
 import { useRouter } from "next/navigation";
 import { Listbox, Transition } from '@headlessui/react'
-import { customFilterProps } from '@/types'
+// import { customFilterProps } from '@/types'
 import { updateSearchParams } from '@/utils'
+import { CustomFilterProps } from './../types/types';
 
 
 
-const CustomFilter = ({ title, options }: customFilterProps) => {
+const CustomFilter = ({ title, options }: CustomFilterProps) => {
 
 
     const Router = useRouter();

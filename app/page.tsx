@@ -7,7 +7,7 @@ import { Hero, SearchBar, CustomFilter, CarCard, ShowMore } from '@/components'
 import { fetchCars } from '@/utils'
 import { fuels, yearsOfProduction } from '@/constants';
 // import { HomeProps } from '@/types'
-import { HomeProps } from './../types/types';
+import { HomeProps, CarCardProps } from './../types/types';
 
 
 
@@ -179,7 +179,7 @@ export default function Home({ searchParams }: HomeProps) {
             allCars && allCars.length > 0 ? (
               <section>
                 <div className='grid 2xl:grid-cols-4 xl:grid-cols-3 md:grid-cols-2 grid-cols-1 w-full gap-8 pt-14'>
-                  {allCars.map((car, ind) => (
+                  {allCars.map((car:CarCardProps, ind:number) => (
                     <CarCard car={car} key={ind} />
                   ))}
                 </div>
